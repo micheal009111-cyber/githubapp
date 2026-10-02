@@ -7,16 +7,23 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId 'com.example.pusheralert'
+        applicationId "com.example.pusheralert"
         minSdk 23
         targetSdk 35
         versionCode 1
-        versionName '1.0'
+        versionName "1.0"
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.core:core:1.13.1'
+        force 'androidx.core:core-ktx:1.13.1'
     }
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'androidx.core:core:1.15.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core:1.13.1'
     implementation 'com.pusher:pusher-java-client:2.4.4'
 }
